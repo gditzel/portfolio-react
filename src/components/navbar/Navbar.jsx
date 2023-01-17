@@ -8,7 +8,7 @@ const Navbar = () => {
           {links.map(({ label, route, icon }) => (
             <li
               key={label}
-              className="py-2 text-center md:border-b md:border-white"
+              className="py-2 text-center last:border-b-0 md:border-b md:border-white"
             >
               <a href={route} className="text-xs uppercase text-white">
                 <img src={icon} alt="Icons" className="mx-auto h-8" />
