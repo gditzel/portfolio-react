@@ -1,5 +1,16 @@
+import { useLocation } from "react-router-dom";
+import { Navbar } from "./components/navbar";
+import PortfolioLayout from "./layout/PortfolioLayout";
+
 function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  const location = useLocation().hash;
+
+  return (
+    <>
+      <Navbar />
+      <PortfolioLayout path={location} />
+    </>
+  );
 }
 
 export default App;
