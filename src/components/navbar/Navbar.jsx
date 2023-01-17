@@ -3,8 +3,8 @@ import links from "../../utils/json/links.json";
 const Navbar = () => {
   return (
     <header>
-      <nav className="rounded-xl bg-gray-700 md:w-20">
-        <ul className="flex justify-evenly md:inline">
+      <nav className="rounded-xl bg-gray-700 lg:w-20">
+        <ul className="flex justify-evenly lg:inline">
           {links.map(({ label, route, icon }) => (
             <li
               key={label}
