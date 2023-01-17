@@ -7,7 +7,7 @@ const About = () => {
         <h1 className="py-4 pl-6 text-3xl text-white">About me</h1>
         <div className="line"></div>
       </div>
-      <p>
+      <p className="p-6 text-white">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
         iste saepe sunt natus provident itaque sed a, porro nisi numquam fugit
         debitis, architecto minus! Id ad ex impedit praesentium nisi? Qui
