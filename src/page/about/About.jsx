@@ -2,11 +2,11 @@ import "../../index.css";
 
 const About = () => {
   return (
-    <section className="absolute top-[700px] rounded-r-xl bg-[#31313b] font-poppins lg:relative lg:top-0 lg:mt-28 lg:h-[600px] lg:w-[700px]">
+    <section className="fade-in absolute top-[700px] bg-[#31313b] font-poppins lg:relative lg:top-0 lg:mt-28 lg:h-[600px] lg:w-[700px] lg:rounded-r-xl">
       <div>
         <div className="circle absolute h-7 w-7 translate-y-6 translate-x-3 rounded-full opacity-50"></div>
         <h1 className="py-4 pl-6 text-3xl text-orange-500">
-          About <span className="text-white">Me</span>
+          A<span className="text-white">bout Me</span>
         </h1>
         <div className="line"></div>
       </div>
