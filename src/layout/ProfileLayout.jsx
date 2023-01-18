@@ -5,7 +5,7 @@ import profile from "../assests/imgs/Profile.jpg";
 
 const ProfileLayout = () => {
   return (
-    <section className="h-screen lg:w-96 lg:pt-20">
+    <section className="h-screen font-poppins lg:w-96 lg:pt-20">
       <div>
         <img
           src={banner}

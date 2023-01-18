@@ -2,7 +2,7 @@ import "../../index.css";
 
 const About = () => {
   return (
-    <section className="absolute top-[700px] w-full bg-[#31313b] lg:relative lg:top-0 lg:mt-28 lg:h-[600px] lg:w-[700px]">
+    <section className="absolute top-[700px] rounded-r-xl bg-[#31313b] font-poppins lg:relative lg:top-0 lg:mt-28 lg:h-[600px] lg:w-[700px]">
       <div>
         <div className="circle absolute h-7 w-7 translate-y-6 translate-x-3 rounded-full opacity-50"></div>
         <h1 className="py-4 pl-6 text-3xl text-orange-500">
@@ -21,6 +21,17 @@ const About = () => {
         molestias aperiam tempora facere est deleniti ex laudantium voluptates
         id dolorem ut ipsa. Commodi et quasi accusantium esse!
       </p>
+
+      <div className="gap-20 pl-6 text-white lg:flex">
+        <div>
+          <p>AGE ............. 24</p>
+          <p>FREELANCE ............. Available</p>
+        </div>
+        <div>
+          <p>RESIDENCE ............. Argentina</p>
+          <p>LOCATION ............. Merlo, Buenos Aires</p>
+        </div>
+      </div>
     </section>
   );
 };
