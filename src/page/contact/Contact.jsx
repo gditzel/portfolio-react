@@ -2,7 +2,7 @@ import "../../index.css";
 
 const Contact = () => {
   return (
-    <section className="absolute top-[700px] w-full bg-gray-700 lg:relative lg:top-0 lg:h-[600px] lg:w-[700px]">
+    <section className="absolute top-[700px] w-full bg-gray-700 lg:relative lg:top-0 lg:mt-10 lg:h-[600px] lg:w-[700px]">
       <div>
         <h1 className="py-4 pl-6 text-3xl text-white">Get in touch</h1>
         <div className="line"></div>

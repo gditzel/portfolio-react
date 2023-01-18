@@ -7,7 +7,7 @@ function App() {
   const location = useLocation().hash;
 
   return (
-    <div className="bg-gray-800 lg:flex">
+    <div className=" justify-center bg-[#1d1c22] lg:flex">
       <Navbar />
       <ProfileLayout />
       <PortfolioLayout path={location} />
