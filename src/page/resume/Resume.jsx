@@ -2,9 +2,12 @@ import "../../index.css";
 
 const Resume = () => {
   return (
-    <section className="absolute top-[700px] w-full bg-gray-700 lg:relative lg:top-0 lg:mt-10 lg:h-[600px] lg:w-[700px]">
+    <section className="fade-in absolute top-[700px] bg-[#31313b] font-poppins lg:relative lg:top-0 lg:mt-28 lg:h-[600px] lg:w-[700px] lg:rounded-r-xl">
       <div>
-        <h1 className="py-4 pl-6 text-3xl text-white">Resume</h1>
+        <div className="circle absolute h-7 w-7 translate-y-6 translate-x-3 rounded-full opacity-50"></div>
+        <h1 className="py-4 pl-6 text-3xl text-orange-500">
+          R<span className="text-white">esume</span>
+        </h1>
         <div className="line"></div>
       </div>
       <p className="p-6 text-white">
