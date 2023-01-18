@@ -1,5 +1,8 @@
 import "../../index.css";
 
+import suitcase from "../../assests/imgs/icons2/suitcase.svg";
+import build from "../../assests/imgs/icons2/build.svg";
+
 const Resume = () => {
   return (
     <section className="fade-in absolute top-[700px] bg-[#31313b] font-poppins lg:relative lg:top-0 lg:mt-28 lg:h-[600px] lg:w-[700px] lg:rounded-r-xl">
@@ -10,19 +13,25 @@ const Resume = () => {
         </h1>
         <div className="line"></div>
       </div>
-      <p className="p-6 text-white">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
-        iste saepe sunt natus provident itaque sed a, porro nisi numquam fugit
-        debitis, architecto minus! Id ad ex impedit praesentium nisi? Qui
-        corporis accusantium ea quia obcaecati exercitationem dolore sapiente
-        architecto saepe nemo sunt, maiores numquam quae ducimus! Ipsum eum ium
-        quia id alias illo iste quasi debitis ex! Temporibus, et necessitatibus
-        nesciunt quae vel quam itaque consequuntur doloremque delectus animi
-        molestias aperiam tempora facere est deleniti ex laudantium voluptates
-        id dolorem ut ipsa. Commodi et quasi accusantium esse!
-      </p>
+
+      <div className="flex justify-around p-6 uppercase text-white">
+        <div>
+          <div className="flex w-72 gap-2">
+            <img src={suitcase} alt="experience icon" className="h-8 w-10" />
+            <h1 className="my-auto">Experience</h1>
+          </div>
+          <div className="line mt-6"></div>
+        </div>
+
+        <div>
+          <div className="flex w-72 gap-2">
+            <img src={build} alt="education icon" className="h-8 w-10" />
+            <h1 className="my-auto">Education</h1>
+          </div>
+          <div className="line mt-6"></div>
+        </div>
+      </div>
     </section>
   );
 };
-
 export default Resume;
