@@ -1,36 +1,69 @@
 import "../../index.css";
 
-const About = () => {
+const About = ({ switchLen }) => {
   return (
-    <section className="fade-in absolute top-[700px] bg-[#31313b] font-poppins lg:relative lg:top-0 lg:mt-28 lg:h-[600px] lg:w-[700px] lg:rounded-r-xl">
+    <section className="fade-in absolute top-[710px] bg-[#31313b] font-poppins lg:relative lg:top-0 lg:mt-28 lg:h-[600px] lg:w-[700px] lg:rounded-r-xl">
       <div>
         <div className="circle absolute h-7 w-7 translate-y-6 translate-x-3 rounded-full opacity-50"></div>
         <h1 className="py-4 pl-6 text-3xl text-orange-500">
-          A<span className="text-white">bout Me</span>
+          {switchLen ? (
+            <>
+              A<span className="text-white">bout Me</span>
+            </>
+          ) : (
+            <>
+              A<span className="text-white">cerca de Mi</span>
+            </>
+          )}
         </h1>
         <div className="line"></div>
       </div>
-      <p className="p-6 text-white">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
-        iste saepe sunt natus provident itaque sed a, porro nisi numquam fugit
-        debitis, architecto minus! Id ad ex impedit praesentium nisi? Qui
-        corporis accusantium ea quia obcaecati exercitationem dolore sapiente
-        architecto saepe nemo sunt, maiores numquam quae ducimus! Ipsum eum ium
-        quia id alias illo iste quasi debitis ex! Temporibus, et necessitatibus
-        nesciunt quae vel quam itaque consequuntur doloremque delectus animi
-        molestias aperiam tempora facere est deleniti ex laudantium voluptates
-        id dolorem ut ipsa. Commodi et quasi accusantium esse!
-      </p>
+      {switchLen ? (
+        <>
+          <p className="p-6 text-white">
+            I am a student in the bachelor's degree in computer science. I am
+            searching for my first work experience in the technology industry,
+            where I can apply my programming knowledge. I consider myself
+            detail-oriented, decisive, proactive, and willing to acquire new
+            knowledge.
+          </p>
+        </>
+      ) : (
+        <>
+          <p className="p-6 text-white">
+            Soy estudiante en la carrera de licenciatura en informática. Me
+            encuentro en búsqueda de mi primer experiencia laboral en la
+            industria de la tecnología, dónde se me permita aplicar mis
+            conocimientos en programación. Me considero detallista, resolutivo,
+            proactivo y dispuesto a adquirir nuevos conocimientos.
+          </p>
+        </>
+      )}
 
       <div className="gap-20 pl-6 text-white lg:flex">
-        <div>
-          <p>AGE ............. 24</p>
-          <p>FREELANCE ............. Available</p>
-        </div>
-        <div>
-          <p>RESIDENCE ............. Argentina</p>
-          <p>LOCATION ............. Merlo, Buenos Aires</p>
-        </div>
+        {switchLen ? (
+          <>
+            <div>
+              <p>AGE ............. 26</p>
+              <p>FREELANCE ............. Available</p>
+            </div>
+            <div>
+              <p>RESIDENCE ............. Argentina</p>
+              <p>LOCATION ............. Merlo, Buenos Aires</p>
+            </div>
+          </>
+        ) : (
+          <>
+            <div>
+              <p>EDAD ............. 26</p>
+              <p>FREELANCE ............. Disponible</p>
+            </div>
+            <div>
+              <p>RESIDENCIA ............. Argentina</p>
+              <p>LOCALIDAD ............. Merlo, Buenos Aires</p>
+            </div>
+          </>
+        )}
       </div>
     </section>
   );

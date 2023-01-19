@@ -4,7 +4,9 @@ import banner from "../assests/imgs/banner.jpg";
 import profile from "../assests/imgs/Profile.jpg";
 import { SocialIcon } from "react-social-icons";
 
-const ProfileLayout = () => {
+import CV from "../utils/CV/CV-GONZALO-NICOLAS-DITZEL.pdf";
+
+const ProfileLayout = ({ switchLen }) => {
   return (
     <section className="h-screen font-poppins lg:w-[500px] lg:pt-20">
       <div>
@@ -24,7 +26,9 @@ const ProfileLayout = () => {
         />
         <div className="mt-4 text-center text-white">
           <h1 className="text-3xl">Gonzalo Ditzel</h1>
-          <h3 className="text mt-2 text-orange-500">Web Development</h3>
+          <h3 className="text mt-2 text-orange-500">
+            {switchLen ? <>Web Development</> : <>Desarrollador Web</>}
+          </h3>
           <div className="mt-2 flex justify-center gap-4">
             <SocialIcon
               url="https://www.linkedin.com/in/gonzaloditzel/"
@@ -40,25 +44,26 @@ const ProfileLayout = () => {
               target="_blank"
               rel="noopener noreferrer"
             />
-            <a href="mailto:gonza.ditzel5@gmail.com">
-              <SocialIcon
-                bgColor="transparent"
-                fgColor="white"
-                target="_blank"
-                rel="noopener noreferrer"
-              />
-            </a>
+            <SocialIcon
+              url="mailto:gonza.ditzel5@gmail.com"
+              bgColor="transparent"
+              fgColor="white"
+              target="_blank"
+              rel="noopener noreferrer"
+            />
           </div>
         </div>
         <div className="mt-12 h-28 bg-[#31313b] text-center text-white lg:rounded-b-xl">
           <div className="line"></div>
-          <button className="mr-6 mt-7 py-2 px-4 uppercase hover:text-orange-500">
-            <a href="#das" download="Gonzalo Ditzel CV">
-              Download cv
+          <button className="mr-6 mt-7 border border-white py-2 px-2 uppercase hover:border-orange-500 hover:text-orange-500 lg:px-4">
+            <a href={CV} download="Gonzalo Ditzel CV">
+              {switchLen ? <>Download CV</> : <>Descargar CV</>}
             </a>
           </button>
-          <button className="py-2 px-4 uppercase hover:text-orange-500">
-            <a href="#Contact">Contact me</a>
+          <button className="border border-white py-2 px-2 uppercase hover:border-orange-500 hover:text-orange-500 lg:px-4">
+            <a href="#Contact">
+              {switchLen ? <>Contact me</> : <>Contactame</>}
+            </a>
           </button>
         </div>
       </div>
