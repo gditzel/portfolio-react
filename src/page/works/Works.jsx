@@ -1,4 +1,8 @@
 import "../../index.css";
+import Community from "../../assests/imgs/community.jpg";
+import Broker from "../../assests/imgs/broker.jpg";
+import Ecommerce from "../../assests/imgs/ecommerce.jpg";
+import Instapins from "../../assests/imgs/instapins.jpg";
 
 const Works = ({ switchLen }) => {
   return (
@@ -10,17 +14,107 @@ const Works = ({ switchLen }) => {
         </h1>
         <div className="line"></div>
       </div>
-      <p className="p-6 text-white">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
-        iste saepe sunt natus provident itaque sed a, porro nisi numquam fugit
-        debitis, architecto minus! Id ad ex impedit praesentium nisi? Qui
-        corporis accusantium ea quia obcaecati exercitationem dolore sapiente
-        architecto saepe nemo sunt, maiores numquam quae ducimus! Ipsum eum ium
-        quia id alias illo iste quasi debitis ex! Temporibus, et necessitatibus
-        nesciunt quae vel quam itaque consequuntur doloremque delectus animi
-        molestias aperiam tempora facere est deleniti ex laudantium voluptates
-        id dolorem ut ipsa. Commodi et quasi accusantium esse!
-      </p>
+
+      <div className="justify-around text-white lg:flex">
+        <div>
+          <h1>Works</h1>
+          <div>
+            <a
+              href="https://alecaglia.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={Community}
+                alt="Community Manager Page"
+                className="h-40 w-60 object-cover"
+              />
+            </a>
+            <div>
+              <a
+                href="https://github.com/gditzel/community-manager"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Repository
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <a
+              href="https://broker-app-nine.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={Broker}
+                alt="Community Manager Page"
+                className="h-40 w-60 object-cover"
+              />
+            </a>
+            <div>
+              <a
+                href="https://github.com/gditzel/broker-app"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Repository
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h1>Projects</h1>
+          <div className="line"></div>
+          <div>
+            <a
+              href="https://ecommerce-ditzel-alkemy.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={Ecommerce}
+                alt="Community Manager Page"
+                className="h-40 w-60 object-cover"
+              />
+            </a>
+            <div>
+              <a
+                href="https://github.com/gditzel/ecommerce-ditzel-alkemy"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Repository
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <a
+              href="https://instapins.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={Instapins}
+                alt="Community Manager Page"
+                className="h-40 w-60 object-cover"
+              />
+            </a>
+            <div>
+              <a
+                href="https://github.com/gditzel/shareme_frontend"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Repository
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };

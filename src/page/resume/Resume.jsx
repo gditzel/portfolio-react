@@ -12,6 +12,9 @@ const list = [
     title: "Figma",
   },
   {
+    title: "Git",
+  },
+  {
     title: "PostresSQL",
   },
   {
@@ -31,9 +34,6 @@ const list = [
   },
   {
     title: "Salesforce",
-  },
-  {
-    title: "Sanity",
   },
 ];
 
@@ -198,7 +198,7 @@ const Resume = ({ switchLen }) => {
           <div className="line mt-8"></div>
           <ul className="pt-8">
             {list.map((e) => (
-              <li className="mb-4 flex gap-2">
+              <li className="mb-4 flex gap-2" key={e.title}>
                 <IconContext.Provider
                   value={{
                     color: "orange",
