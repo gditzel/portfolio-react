@@ -15,12 +15,12 @@ const ProfileLayout = ({ switchLen }) => {
         <img
           src={banner}
           alt="Banner del perfil"
-          className="h-80 w-full object-cover lg:rounded-t-xl lg:border"
+          className="h-80 w-full object-cover lg:rounded-t-xl"
         />
       </div>
       <div className="-mt-10 h-64 -skew-y-12 bg-[#31313b]"></div>
       <div className="absolute top-[390px] right-0 left-0 h-64 skew-y-12 bg-[#31313b] md:relative md:-top-64"></div>
-      <div className="absolute top-72 right-0 left-0 md:relative md:-top-[600px] lg:rounded-b-xl lg:border-x lg:border-b">
+      <div className="absolute top-72 right-0 left-0 md:relative md:-top-[600px]">
         <img
           src={profile}
           alt="Profile"
@@ -29,7 +29,7 @@ const ProfileLayout = ({ switchLen }) => {
         <div className="mt-4 text-center text-white">
           <h1 className="text-3xl">Gonzalo Ditzel</h1>
           <h3 className="text mt-2 text-orange-500">
-            {switchLen ? <>Web Development</> : <>Desarrollador Web</>}
+            {switchLen ? <>Web Developer</> : <>Desarrollador Web</>}
           </h3>
           <div className="mt-4 flex justify-center gap-4">
             <IconContext.Provider
