@@ -1,8 +1,67 @@
 import "../../index.css";
 
+import emailjs from "emailjs-com";
+import { useRef, useState } from "react";
+import Swal from "sweetalert2";
+
 const Contact = ({ switchLen }) => {
+  const [fields, setFields] = useState();
+
+  const clearForm = () => {
+    setFields("");
+  };
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    const email = e.target.email.value;
+
+    const regexEmail =
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    if (email !== "" && !regexEmail.test(email)) {
+      Swal.fire({
+        icon: "error",
+        title: "Debes escribir una dirección válida",
+        timer: 1500,
+      });
+      return;
+    }
+
+    emailjs
+      .sendForm(
+        "service_hjhmq3t",
+        "template_2ezpekb",
+        form.current,
+        "AIb21sO4WASqiL1oy"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    Swal.fire({
+      title: "Mensaje enviado con exito",
+      icon: "success",
+      timer: 1500,
+    })
+      .then(clearForm)
+      .finally(
+        // eslint-disable-next-line no-global-assign
+        (setTimeout = () => {
+          window.location.reload(true);
+        }),
+        5000
+      );
+  };
+
   return (
-    <section className="fade-in absolute top-[710px] bg-[#31313b] font-poppins lg:relative lg:top-0 lg:mt-28 lg:h-[500px] lg:w-[700px] lg:rounded-r-xl">
+    <section className="fade-in absolute top-[700px] bg-[#31313b] font-poppins lg:relative lg:top-0 lg:mt-28 lg:h-[500px] lg:w-[700px] lg:rounded-r-xl">
       <div>
         <div className="circle absolute h-7 w-7 translate-y-6 translate-x-3 rounded-full opacity-50"></div>
         <h1 className="py-4 pl-6 text-3xl text-orange-500">
@@ -10,17 +69,41 @@ const Contact = ({ switchLen }) => {
         </h1>
         <div className="line"></div>
       </div>
-      <p className="p-6 text-white">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
-        iste saepe sunt natus provident itaque sed a, porro nisi numquam fugit
-        debitis, architecto minus! Id ad ex impedit praesentium nisi? Qui
-        corporis accusantium ea quia obcaecati exercitationem dolore sapiente
-        architecto saepe nemo sunt, maiores numquam quae ducimus! Ipsum eum ium
-        quia id alias illo iste quasi debitis ex! Temporibus, et necessitatibus
-        nesciunt quae vel quam itaque consequuntur doloremque delectus animi
-        molestias aperiam tempora facere est deleniti ex laudantium voluptates
-        id dolorem ut ipsa. Commodi et quasi accusantium esse!
-      </p>
+
+      <form className="mt-6 text-white" ref={form} onSubmit={sendEmail}>
+        <div className="grid grid-cols-1 gap-4 py-4 px-8 md:grid-cols-2">
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Full Name"
+            value={fields}
+            className="border-b bg-[#31313b] py-4 outline-none focus:border-orange-500 placeholder:focus:text-white"
+          />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email Address"
+            value={fields}
+            className="border-b bg-[#31313b] py-4 outline-none focus:border-orange-500 placeholder:focus:text-white"
+          />
+          <textarea
+            type="text"
+            name="msg"
+            id="msg"
+            placeholder="Your Message"
+            value={fields}
+            className="col-span-2 mt-12 w-full resize-none border-b bg-[#31313b] outline-none focus:border-orange-500 placeholder:focus:text-white"
+          ></textarea>
+          <div className="mt-6 flex w-40 gap-2 text-start text-sm  hover:text-orange-500">
+            <button type="submit" className="uppercase">
+              Send Message
+            </button>
+            &#8640;
+          </div>
+        </div>
+      </form>
     </section>
   );
 };
