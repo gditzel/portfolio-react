@@ -39,7 +39,7 @@ const list = [
 
 const Resume = ({ switchLen }) => {
   return (
-    <section className="fade-in scroll absolute top-[710px] overflow-auto bg-[#31313b] font-poppins lg:relative lg:top-0 lg:mt-28 lg:h-[500px] lg:w-[700px]">
+    <section className="fade-in scroll absolute top-[700px] w-screen bg-[#31313b] font-poppins lg:relative lg:top-0 lg:mt-28 lg:h-[500px] lg:w-[700px] lg:overflow-auto">
       <div>
         <div className="circle absolute h-7 w-7 translate-y-6 translate-x-3 rounded-full opacity-50"></div>
         <h1 className="py-4 pl-6 text-3xl text-orange-500">
@@ -56,7 +56,7 @@ const Resume = ({ switchLen }) => {
         <div className="line"></div>
       </div>
 
-      <div className="flex justify-around p-6 text-white">
+      <div className="justify-around p-6 text-white md:flex">
         <div>
           <div className="flex w-72 gap-2">
             <img src={suitcase} alt="experience icon" className="h-8 w-10" />
@@ -162,7 +162,7 @@ const Resume = ({ switchLen }) => {
         <div className="line"></div>
       </div>
 
-      <div className="flex justify-around p-6 text-white">
+      <div className="justify-around p-6 text-white md:flex">
         <div>
           <div className="flex w-72 gap-2">
             <IconContext.Provider
