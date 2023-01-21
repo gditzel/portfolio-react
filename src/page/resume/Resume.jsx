@@ -162,7 +162,7 @@ const Resume = ({ switchLen }) => {
         <div className="line"></div>
       </div>
 
-      <div className="justify-around p-6 text-white md:flex">
+      <div className="justify-around px-6 pt-6 text-white md:flex">
         <div>
           <div className="flex w-72 gap-2">
             <IconContext.Provider
@@ -213,6 +213,9 @@ const Resume = ({ switchLen }) => {
           </ul>
         </div>
       </div>
+      <h2 className="pb-4 pl-6 text-white">
+        The progress bars represent the hours invested in each technology.
+      </h2>
     </section>
   );
 };
