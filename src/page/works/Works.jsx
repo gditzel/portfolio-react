@@ -6,7 +6,7 @@ import Instapins from "../../assests/imgs/instapins.jpg";
 
 const Works = ({ switchLen }) => {
   return (
-    <section className="fade-in absolute top-[710px] bg-[#31313b] font-poppins lg:relative lg:top-0 lg:mt-28 lg:h-[500px] lg:w-[700px] lg:rounded-r-xl">
+    <section className="fade-in scroll absolute top-[700px] w-screen bg-[#31313b] pb-4 font-poppins lg:relative lg:top-0 lg:mt-28 lg:h-[500px] lg:w-[700px] lg:overflow-auto">
       <div>
         <div className="circle absolute h-7 w-7 translate-y-6 translate-x-3 rounded-full opacity-50"></div>
         <h1 className="py-4 pl-6 text-3xl text-orange-500">
@@ -14,27 +14,30 @@ const Works = ({ switchLen }) => {
         </h1>
         <div className="line"></div>
       </div>
-
-      <div className="justify-around text-white lg:flex">
+      <div className="mt-10 justify-around gap-4 text-white md:flex">
         <div>
-          <h1>Works</h1>
-          <div>
+          <h1 className="pl-6 text-lg uppercase">Works</h1>
+          <div className="line"></div>
+          <div className="my-8">
             <a
               href="https://alecaglia.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
+              className="hover:text-orange-500"
             >
+              <h2 className="text-center">Community Manager</h2>
               <img
                 src={Community}
                 alt="Community Manager Page"
-                className="h-40 w-60 object-cover"
+                className="mx-auto h-40 w-80 object-cover"
               />
             </a>
-            <div>
+            <div className="mt-4 text-center text-sm lg:text-start">
               <a
                 href="https://github.com/gditzel/community-manager"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="rounded-full border border-orange-500 bg-orange-500 py-1 px-2 hover:bg-white hover:text-orange-500"
               >
                 Repository
               </a>
@@ -46,18 +49,21 @@ const Works = ({ switchLen }) => {
               href="https://broker-app-nine.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
+              className="hover:text-orange-500"
             >
+              <h2 className="text-center">Asseg Seguros</h2>
               <img
                 src={Broker}
                 alt="Community Manager Page"
-                className="h-40 w-60 object-cover"
+                className="mx-auto h-40 w-80 object-cover"
               />
             </a>
-            <div>
+            <div className="mt-4 text-center text-sm lg:text-start">
               <a
                 href="https://github.com/gditzel/broker-app"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="rounded-full border border-orange-500 bg-orange-500 py-1 px-2 hover:bg-white hover:text-orange-500"
               >
                 Repository
               </a>
@@ -66,25 +72,28 @@ const Works = ({ switchLen }) => {
         </div>
 
         <div>
-          <h1>Projects</h1>
+          <h1 className="mt-10 pl-6 text-lg uppercase md:mt-0">Projects</h1>
           <div className="line"></div>
-          <div>
+          <div className="my-8">
             <a
               href="https://ecommerce-ditzel-alkemy.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
+              className="hover:text-orange-500"
             >
+              <h2 className="text-center">Computer Store</h2>
               <img
                 src={Ecommerce}
                 alt="Community Manager Page"
-                className="h-40 w-60 object-cover"
+                className="mx-auto h-40 w-80 object-cover"
               />
             </a>
-            <div>
+            <div className="mt-4 text-center text-sm lg:text-start">
               <a
                 href="https://github.com/gditzel/ecommerce-ditzel-alkemy"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="rounded-full border border-orange-500 bg-orange-500 py-1 px-2 hover:bg-white hover:text-orange-500"
               >
                 Repository
               </a>
@@ -96,18 +105,21 @@ const Works = ({ switchLen }) => {
               href="https://instapins.netlify.app/"
               target="_blank"
               rel="noopener noreferrer"
+              className="hover:text-orange-500"
             >
+              <h2 className="text-center">Instapins</h2>
               <img
                 src={Instapins}
                 alt="Community Manager Page"
-                className="h-40 w-60 object-cover"
+                className="mx-auto h-40 w-80 object-cover"
               />
             </a>
-            <div>
+            <div className="mt-4 text-center text-sm lg:text-start">
               <a
                 href="https://github.com/gditzel/shareme_frontend"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="rounded-full border border-orange-500 bg-orange-500 py-1 px-2 hover:bg-white hover:text-orange-500"
               >
                 Repository
               </a>

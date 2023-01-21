@@ -15,7 +15,7 @@ function App() {
 
   return (
     <div className="justify-center bg-[#1d1c22] lg:flex">
-      <div className="pt-2 lg:pt-10">
+      <div className="top-0 left-0 pt-2 lg:absolute lg:-mt-4 lg:pl-6 lg:pt-10">
         <label className="relative inline-flex cursor-pointer items-center">
           <input
             type="checkbox"
