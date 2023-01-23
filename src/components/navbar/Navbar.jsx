@@ -23,7 +23,7 @@ const Navbar = ({ switchLen }) => {
                 <li key={label} className="py-2 text-center">
                   <a
                     href={route}
-                    className="text-xs uppercase text-white"
+                    className="text-xs uppercase"
                     style={{ color: activeLink === label ? "orange" : "white" }}
                     onClick={() => handleClick(label)}
                   >

@@ -21,11 +21,11 @@ const About = ({ switchLen }) => {
       {switchLen ? (
         <>
           <p className="p-6 text-white">
-            I am a student in the bachelor's degree in computer science. I am
-            searching for my first work experience in the technology industry,
-            where I can apply my programming knowledge. I consider myself
-            detail-oriented, decisive, proactive, and willing to acquire new
-            knowledge.
+            My course of studies at university is Computer Science. At present,
+            I am looking for my first professional job in the IT industry, where
+            I can apply my programming skills. I consider myself a
+            detail-oriented person, who is extremely proactive and has great
+            problem-solving traits. I am always willing to learn new things.
           </p>
         </>
       ) : (
@@ -35,7 +35,8 @@ const About = ({ switchLen }) => {
             encuentro en búsqueda de mi primer experiencia laboral en la
             industria de la tecnología, dónde se me permita aplicar mis
             conocimientos en programación. Me considero detallista, resolutivo,
-            proactivo y dispuesto a adquirir nuevos conocimientos.
+            proactivo y dispuesto a adquirir nuevos conocimientos. Siempre estoy
+            dispuesta a aprender cosas nuevas.
           </p>
         </>
       )}

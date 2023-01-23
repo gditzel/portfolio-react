@@ -179,6 +179,9 @@ const Resume = ({ switchLen }) => {
           </div>
           <div className="line mt-8"></div>
           <ProgresBar />
+          <h2 className="pb-8 pl-6 text-white">
+            The progress bars represent the hours invested in each technology.
+          </h2>
         </div>
 
         <div>
@@ -213,9 +216,6 @@ const Resume = ({ switchLen }) => {
           </ul>
         </div>
       </div>
-      <h2 className="pb-4 pl-6 text-white">
-        The progress bars represent the hours invested in each technology.
-      </h2>
     </section>
   );
 };

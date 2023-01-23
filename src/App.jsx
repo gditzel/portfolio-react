@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Navbar } from "./components/navbar";
+import Spinner from "./components/spinner/Spinner";
 import PortfolioLayout from "./layout/PortfolioLayout";
 import ProfileLayout from "./layout/ProfileLayout";
 
@@ -8,10 +9,21 @@ function App() {
   const location = useLocation().hash;
 
   const [active, setActive] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   const toggleClick = () => {
     setActive(!active);
   };
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
+
+  if (loading) {
+    return <Spinner />;
+  }
 
   return (
     <div className="justify-center bg-[#1d1c22] lg:flex">
