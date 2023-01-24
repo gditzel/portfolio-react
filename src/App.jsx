@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Navbar } from "./components/navbar";
 import Spinner from "./components/spinner/Spinner";
 import PortfolioLayout from "./layout/PortfolioLayout";
@@ -7,6 +7,7 @@ import ProfileLayout from "./layout/ProfileLayout";
 
 function App() {
   const location = useLocation().hash;
+  const history = useNavigate();
 
   const [active, setActive] = useState(true);
   const [loading, setLoading] = useState(true);
@@ -20,6 +21,10 @@ function App() {
       setLoading(false);
     }, 2000);
   }, []);
+
+  useEffect(() => {
+    history("#About");
+  }, [history]);
 
   if (loading) {
     return <Spinner />;

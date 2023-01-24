@@ -9,7 +9,6 @@ const PortfolioLayout = ({ path, switchLen }) => {
   else if (path === "#Resume") return <Resume switchLen={switchLen} />;
   else if (path === "#Works") return <Works switchLen={switchLen} />;
   else if (path === "#Contact") return <Contact switchLen={switchLen} />;
-  else return <About />;
 };
 
 export default PortfolioLayout;
